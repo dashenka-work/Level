@@ -1,0 +1,20 @@
+// Заголовки, общие БЄМ блоки и проче...
+.padding {
+   @include adaptiveValue("padding-top", 30, 15);
+   @include adaptiveValue("padding-bottom", 30, 15);
+}
+
+.btn {
+   padding: rem(10);
+   border-radius: rem(20);
+   border: rem(3) solid rgb(71, 15, 136);
+   @include adaptiveValue("font-size", 32, 22);
+   font-weight: 700;
+   transition: all 0.2s linear 0s;
+   @media (any-hover: hover) {
+      &:hover {
+         box-shadow: 0px rem(4) rem(10) rem(2) rgba(71, 15, 136, 0.5);
+         transform: scale(1.1);
+      }
+   }
+}
